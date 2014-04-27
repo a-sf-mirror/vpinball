@@ -132,6 +132,9 @@ HRESULT Pin3D::InitPin3D(const HWND hwnd, const bool fFullScreen, const int scre
     ballTexture.CreateFromResource(IDB_BALLTEXTURE);
     ballTexture.SetAlpha(RGB(0,0,0));
 
+    ballScratchTexture.CreateFromResource(IDB_BALL_SCRATCHES);
+    ballScratchTexture.SetAlpha(RGB(0,0,0));
+
     lightTexture[0].CreateFromResource(IDB_SUNBURST);
     lightTexture[0].SetAlpha(RGB(0,0,0));
 

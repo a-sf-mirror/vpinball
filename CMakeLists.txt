@@ -176,6 +176,7 @@ set(SOURCES
 
 set(HEADERS
   ballex.h
+  ballMesh.h
   buildnum.h
   buildnumber.h
   bumper.h

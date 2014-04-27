@@ -3,6 +3,7 @@
 #include "kdtree.h"
 #include "quadtree.h"
 #include <unordered_set>
+#include <d3dx9.h>
 
 #define DEFAULT_PLAYER_WIDTH 1024
 
@@ -106,6 +107,7 @@ public:
 	virtual ~Player();
 
 	HRESULT Init(PinTable * const ptable, const HWND hwndProgress, const HWND hwndProgressName);
+   void InitBallShader();
 	void InitWindow();
 #ifdef ULTRAPIN
 	void InitDMDHackWindow();
@@ -169,6 +171,8 @@ public:
 #ifdef ULTRAPIN
 	HWND m_dmdhackhwnd;
 #endif
+   ID3DXEffect*					ballShader;
+   IndexBuffer *ballIndexBuffer;
 
 	PinTable *m_ptable;
 
